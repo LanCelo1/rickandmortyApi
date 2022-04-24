@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/characterScreen">
+
+    <fragment
+        android:id="@+id/characterScreen"
+        android:name="uz.gita.rickandmortyapi.ui.screens.CharacterScreen"
+        android:label="CharacterScreen" >
+        <action
+            android:id="@+id/action_characterScreen_to_episodeScreen"
+            app:destination="@id/episodeScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeScreen"
+        android:name="uz.gita.rickandmortyapi.ui.screens.EpisodeScreen"
+        android:label="EpisodeScreen" >
+        <argument
+            android:name="navArgs"
+            app:argType="uz.gita.rickandmortyapi.model.Result" />
+    </fragment>
+</navigation>
